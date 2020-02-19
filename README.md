@@ -187,13 +187,15 @@ que peut-on en déduire sur les fichiers commençant par un point ?
 8. Que fait la commande echo 'yo' > plop exécutée 2 fois ?
     
     ```txt
-    Elle écrit yo dans un fichier nommé plop (> écrit dans le fichier donc peu importe le nombre de fois qu’on éxécute la commande il       n’y aura qu’un ‘yo’.
+    Elle écrit yo dans un fichier nommé plop (> écrit dans le fichier donc peu importe
+    le nombre de fois qu’on éxécute la commande iln’y aura qu’un ‘yo’.
     ```
 
 9. Que fait la commande echo 'yo' >> plop exécutée 2 fois ?
     
     ```txt
-    Elle écrit yo yo dans un fichier (>> ajoute dans le fichier donc on aura autant de ‘yo’ que d’éxécutions de la commande)
+    Elle écrit yo yo dans un fichier
+    (>> ajoute dans le fichier donc on aura autant de ‘yo’ que d’éxécutions de la commande)
     ```
 
 
