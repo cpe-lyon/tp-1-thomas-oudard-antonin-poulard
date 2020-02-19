@@ -135,3 +135,92 @@ que peut-on en déduire sur les fichiers commençant par un point ?
     ls affiche les dossiers/fichiers du repertoire courant.
     la affiche les dossiers/fichiers du repertoire courant ainsi que les dossiers/fichiers cachés.
     ```
+3. Où se situe le programme ls ?
+    
+    ```txt
+    whereis ls
+    ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz
+    ```
+
+4. Essayez la commande ll. Existe-t-il une entrée de manuel pour cette commande ? Utilisez les commandes alias ou alias pour en savoir plus sur la nature de cette commande.
+    
+    ```txt
+    ll
+    total 48
+    drwxr-xr-x 6 antonin antonin 4096 Feb 13 16:19 ./
+    drwxr-xr-x 3 root    root    4096 Feb 13 14:14 ../
+    -rw------- 1 antonin antonin  706 Feb 13 15:50 .bash_history
+    -rw-r--r-- 1 antonin antonin  220 May  5  2019 .bash_logout
+    -rw-r--r-- 1 antonin antonin 3771 May  5  2019 .bashrc
+    drwx------ 2 antonin antonin 4096 Feb 13 14:18 .cache/
+    drwxrwxr-x 2 antonin antonin 4096 Feb 13 15:40 Dossier1/
+    drwx------ 3 antonin antonin 4096 Feb 13 14:18 .gnupg/
+    -rw------- 1 antonin antonin   36 Feb 13 15:17 .lesshst
+    drwxrwxr-x 3 antonin antonin 4096 Feb 13 15:51 .local/
+    -rw-rw-r-- 1 antonin antonin    3 Feb 13 16:14 plop
+    -rw-r--r-- 1 antonin antonin  807 May  5  2019 .profile
+    -rw-r--r-- 1 antonin antonin    0 Feb 13 14:18 .sudo_as_admin_successful
+
+    Alias
+    alias ll='ls -alF'
+    ```
+
+5. Quelle commande permet d’afficher les fichiers contenus dans le dossier /bin ?
+    
+    ```txt
+    ls /bin
+    ```
+
+6. Que fait la commande ls .. ?
+    
+    ```txt
+    Elle liste les fichiers dans le répertoire actuel
+    ```
+
+7. Quelle commande donne le chemin complet du dossier courant ?
+    
+    ```txt
+    pwd
+    /home/antonin
+    ```
+
+8. Que fait la commande echo 'yo' > plop exécutée 2 fois ?
+    
+    ```txt
+    Elle écrit yo dans un fichier nommé plop (> écrit dans le fichier donc peu importe le nombre de fois qu’on éxécute la commande il       n’y aura qu’un ‘yo’.
+    ```
+
+9. Que fait la commande echo 'yo' >> plop exécutée 2 fois ?
+    
+    ```txt
+    Elle écrit yo yo dans un fichier (>> ajoute dans le fichier donc on aura autant de ‘yo’ que d’éxécutions de la commande)
+    ```
+
+
+10. A quoi sert la commande file ? Essayez la sur des fichiers de types différents.
+    
+    ```txt
+    file plop
+    plop: ASCII text
+
+    Elle donne le type de fichier
+    ```
+    
+11. Créez un fichier toto qui contient la chaîne Hello Toto ! ; créer ensuite un lien titi vers ce fichier
+avec la commande ln toto titi. Modifiez à présent le contenu de toto et affichez le contenu de titi :
+qu’observe-t-on ? Supprimez le fichier toto ; quelle conséquence cela a-t-il sur titi ?
+    
+    ```txt
+    echo 'Hello Toto !' > toto
+    ln toto titi
+    titi existe toujours malgré que toto soit supprimé
+    ```
+
+12. Créez à présent un lien symbolique tutu sur titi avec la commande ln -s titi tutu. Modifiez le
+contenu de titi ; quelle conséquence pour tutu ? Et inversement ? Supprimez le fichier titi ; quelle
+conséquence cela a-t-il sur tutu ?
+    
+    ```txt
+    Tutu a été modifié aussi (enfin pas vraiment étant donné que ce n’est pas un fichier en soi)
+    Une fois le fichier titi supprimé tutu existe toujours mais ne pointe sur rien, il est donc vide.
+    ```
